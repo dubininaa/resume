@@ -26,7 +26,12 @@ export default function Navigation() {
     setMobileMenuOpen(false);
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (window.history?.replaceState) {
+        window.history.replaceState(null, "", href);
+      }
+    } else {
+      window.location.hash = href;
     }
   };
 

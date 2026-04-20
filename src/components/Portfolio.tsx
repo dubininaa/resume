@@ -97,7 +97,7 @@ export default function Portfolio() {
     <section id="portfolio" className="py-24 bg-black text-white" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
-          className="flex items-end gap-4 mb-16"
+          className="flex flex-col sm:flex-row items-start sm:items-end gap-4 mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
